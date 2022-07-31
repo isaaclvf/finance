@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block title %} Log In {% endblock %} {% block
+main %}
+<div
+  class="alert alert-primary w-50 d-inline-flex justify-content-center"
+  data-alert="primary"
+  role="alert"
+>
+  <p>
+    Welcome! In this website you can “buy” and “sell” stocks. Feel free to
+    <a href="/register">register</a> for an account and play around.
+  </p>
+</div>
+<form action="/login" method="post">
+  <div class="mb-3">
+    <input
+      autocomplete="off"
+      autofocus
+      class="form-control mx-auto w-auto"
+      id="username"
+      name="username"
+      placeholder="Username"
+      type="text"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="password"
+      name="password"
+      placeholder="Password"
+      type="password"
+    />
+  </div>
+  <button class="btn btn-primary" type="submit">Log In</button>
+</form>
+{% endblock %}

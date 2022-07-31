@@ -1,0 +1,32 @@
+{% extends "layout.html" %} {% block title %} Index {% endblock %} {% block main
+%}
+<table class="table table-striped">
+  <thead>
+    <th class="text-start">Name</th>
+    <th class="text-end">Current price</th>
+    <th class="text-end">Shares</th>
+    <th class="text-end">Holdings</th>
+  </thead>
+  <tbody>
+    {% for i in range(length) %}
+    <tr>
+      <th class="text-start">{{ stock_names[i] }}</th>
+      <th class="text-end">{{ stock_prices[i] }}</th>
+      <th class="text-end">{{ shares[i] }}</th>
+      <th class="text-end">{{ shares[i] * stock_prices[i] }}</th>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr>
+      <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+      <td class="border-0 text-end">{{ cash }}</td>
+    </tr>
+    <tr>
+      <td class="border-0 fw-bold text-end" colspan="4">Total</td>
+      <td class="border-0 w-bold text-end">{{ total }}</td>
+    </tr>
+  </tfoot>
+</table>
+
+{% endblock %}
