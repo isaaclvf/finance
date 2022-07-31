@@ -1,5 +1,7 @@
 # CS50 Finance
 
+[Live demo](https://frozen-plains-79768.herokuapp.com/)
+
 ## Setup
 
 Install depedencies:
